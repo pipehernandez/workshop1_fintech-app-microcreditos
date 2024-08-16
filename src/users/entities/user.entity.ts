@@ -1,17 +1,16 @@
-import { FinancialRecord } from 'src/interfaces/financial-record.interface';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('users')
 export class User {
-  @PrimaryGeneratedColumn()
-  id: number;
+    @PrimaryGeneratedColumn()
+    id: number;
 
-  @Column()
-  name: string;
+    @Column()
+    name: string;
 
-  @Column()
-  creditScore: number;
+    @Column()
+    creditScore: number;
 
-  @Column()
-  financialHistory?: FinancialRecord[];
+    @Column('text')
+    financialHistory: string;
 }
