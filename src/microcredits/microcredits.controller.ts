@@ -9,7 +9,7 @@ export class MicrocreditsController {
 
   @Post()
   create(@Body() createMicrocreditDto: CreateMicrocreditDto) {
-    return this.microcreditsService.create(createMicrocreditDto);
+    return this.microcreditsService.create();
   }
 
   @Get()
